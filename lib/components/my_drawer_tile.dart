@@ -27,15 +27,15 @@ class MyDrawerTile extends StatelessWidget {
     // LIST TILE
     return ListTile(
       title: Text(
-        "Home",
+        title,
         style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),
       ),
       // leading --> make the icon display before the title
       leading: Icon(
-        Icons.home,
+        icon,
         color: Theme.of(context).colorScheme.primary,
       ),
-      onTap: () {},
+      onTap: onTap,
     );
   }
 }

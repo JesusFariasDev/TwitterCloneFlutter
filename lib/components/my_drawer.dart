@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:twittercloneapp/components/my_drawer_tile.dart';
 
+import '../pages/settings_page.dart';
+
 class MyDrawer extends StatelessWidget{
   const MyDrawer({super.key});
 
@@ -27,9 +29,29 @@ class MyDrawer extends StatelessWidget{
               color: Theme.of(context).colorScheme.secondary,
               ),
             
-            MyDrawerTile(),
+            MyDrawerTile(
+              title: "HOME",
+              icon: Icons.home,
+              onTap: () {
+                // closing the navigator
+                Navigator.pop(context);
+              },
+            ),
 
-            MyDrawerTile(),
+            MyDrawerTile(
+              title: "SETTINGS",
+              icon: Icons.settings,
+              onTap: () {
+                Navigator.pop(context);
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingsPage(),
+                  ),
+                );
+              },
+            ),
 
           ],
           ),

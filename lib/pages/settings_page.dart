@@ -22,7 +22,7 @@ class SettingsPage extends StatelessWidget {
           ListTile(
             title: Text("Dark Mode"),
             trailing:  CupertinoSwitch(
-              // using cupertinoswitch to change the theme calling toggleTheme
+              // using cupertinoswitch to change the theme, calling toggleTheme
               onChanged: (value) => 
                 Provider.of<ThemeProvider>(context, listen: false)
                   .toggleTheme(),
